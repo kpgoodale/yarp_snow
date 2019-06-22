@@ -1,0 +1,181 @@
+<html>
+<head>
+<style>
+    html,body {
+        height:100%;
+    }
+
+    body {
+        width:100%;
+        background:white;
+        text-align:center;
+    }
+    .game_bg {
+        height:100%;
+        display:block;
+    }
+    #game {
+        
+        position:relative;
+        height:100%;
+        display:inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .flake {
+        width:10%;
+        height:5%;
+        background-image: url("img/flake-transparent.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -300px;
+
+        animation-iteration-count: infinite;
+        animation-name: snowDown,snowSideMid,snrowtate;
+        animation-duration: 14s;
+        animation-timing-function: linear;
+    }
+
+    .flake.smol {
+        width:5%;
+        height:2%;
+    }
+
+    .flake.left1 {
+        animation-name: snowDown,snowSideLeft1,snrowtate;
+    }
+    .flake.left2 {
+        animation-name: snowDown,snowSideLeft2,snrowtate;
+    }
+    .flake.right2 {
+        animation-name: snowDown,snowSideRight2,snrowtate;
+    }
+    .flake.right1 {
+        animation-name: snowDown,snowSideRight1,snrowtate;
+    }
+
+    @keyframes snowDownold {
+        from {top:30px}
+        to {top:100%;}
+    }
+
+    @keyframes snowDown {
+        0% {top:30px}
+        10% {top:10%;}
+        20% {top:20%;}
+        30% {top:30%;}
+        40% {top:40%;}
+        50% {top:50%;}
+        60% {top:60%;}
+        70% {top:70%;}
+        80% {top:80%;}
+        90% {top:90%;}
+        100% {top:100%;}
+    }
+
+    @keyframes snowSideMid {
+        0% {left:50%;}
+        12% {left:53%;}
+        22% {left:47%;}
+        32% {left:53%;}
+        42% {left:50%;}
+        52% {left:55%;}
+        62% {left:49%;}
+        72% {left:53%;}
+        82% {left:50%;}
+        92% {left:46%;}
+        100% {left:52%}
+    }
+
+    @keyframes snowSideLeft1 {
+        0% {left:17%;}
+        12% {left:20%;}
+        22% {left:14%;}
+        32% {left:20%;}
+        42% {left:17%;}
+        52% {left:22%;}
+        62% {left:16%;}
+        72% {left:20%;}
+        82% {left:17%;}
+        92% {left:14%;}
+        100% {left:19%}
+    }
+
+    @keyframes snowSideLeft2 {
+        0% {left:33%;}
+        12% {left:36%;}
+        22% {left:30%;}
+        32% {left:36%;}
+        42% {left:30%;}
+        52% {left:38%;}
+        62% {left:32%;}
+        72% {left:36%;}
+        82% {left:30%;}
+        92% {left:29%;}
+        100% {left:35%}
+    }
+
+    @keyframes snowSideRight2 {
+        0% {left:67%;}
+        12% {left:70%;}
+        22% {left:64%;}
+        32% {left:70%;}
+        42% {left:67%;}
+        52% {left:72%;}
+        62% {left:66%;}
+        72% {left:70%;}
+        82% {left:67%;}
+        92% {left:63%;}
+        100% {left:69%}
+    }
+
+    @keyframes snowSideRight1 {
+        0% {left:83%;}
+        12% {left:86%;}
+        22% {left:80%;}
+        32% {left:86%;}
+        42% {left:83%;}
+        52% {left:88%;}
+        62% {left:82%;}
+        72% {left:86%;}
+        82% {left:83%;}
+        92% {left:79%;}
+        100% {left:85%}
+    }
+
+    
+
+    @keyframes snrowtate {
+        0% {transform:rotate(0deg)}
+        07% {transform:rotate(35deg)}
+        17% {transform:rotate(-15deg)}
+        27% {transform:rotate(35deg)}
+        37% {transform:rotate(-15deg)}
+        47% {transform:rotate(35deg)}
+        57% {transform:rotate(-15deg)}
+        67% {transform:rotate(35deg)}
+        77% {transform:rotate(-15deg)}
+        84% {transform:rotate(35deg)}
+        100% {transform:rotate(55deg)}
+    }
+</style>
+</head>
+
+<body>
+    <div id="game">
+        <img class="game_bg" src="img/snowqueen.webp"/>
+        <div class="flake"></div>
+        <div class="flake smol delayed left1"></div>
+        <div class="flake smol delayed left2"></div>
+        <div class="flake smol delayed right2"></div>
+        <div class="flake smol delayed right1"></div>
+    </div>
+<script>
+    document.getElementById('flake').addEventListener('click', (event) => {alert('test')});
+</script>
+</body>
+
+</html>
